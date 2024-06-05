@@ -1,6 +1,6 @@
 <template>
   <div class="tile" :class="{ empty: tile === 0 }" @click="$emit('click')">
-    {{ tile !== 0 ? tile : '' }}
+    <span style="font-weight: bold">{{ tile !== 0 ? tile : '' }}</span>
   </div>
 </template>
 

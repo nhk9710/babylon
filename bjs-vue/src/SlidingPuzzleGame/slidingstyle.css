@@ -1,22 +1,38 @@
 .puzzle {
-    width: 400px;
-    height: 400px;
+    width: 90vw; /* 90% of viewport width */
+    max-width: 400px; /* Maximum width of 400px */
+    height: 90vw; /* 90% of viewport width */
+    max-height: 400px; /* Maximum height of 400px */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    border: 1px solid black;
+    background-color: #dbdcde;
+    border-radius: 5px;
     gap: 2px;
 }
 
 .tile {
     display: flex;
     align-items: center;
+    border-radius: 5px;
     justify-content: center;
-    font-size: 2em;
+    font-size: 6vw; /* Adjust font size based on viewport width */
     border: 1px solid #000;
-    background-color: black;
+    background-color: #46b976;
 }
 
 .tile.empty {
     background-color: #eee;
+}
+
+/* Media query for larger screens like monitors */
+@media screen and (min-width: 768px) {
+    .puzzle {
+        width: 400px;
+        height: 400px;
+    }
+
+    .tile {
+        font-size: 2em;
+    }
 }
