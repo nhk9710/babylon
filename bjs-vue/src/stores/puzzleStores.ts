@@ -18,7 +18,7 @@ export const usePuzzleStore = defineStore('puzzle', () => {
             [tiles.value[index], tiles.value[emptyIndex]] = [tiles.value[emptyIndex], tiles.value[index]];
             tiles.value = [...tiles.value];
             if (isSolved(tiles.value)) {
-                alert('Congratulations, you solved the puzzle!');
+                alert('우승');
             }
         }
     }
